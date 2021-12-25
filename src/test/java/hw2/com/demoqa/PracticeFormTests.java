@@ -1,4 +1,4 @@
-package com.demoqa;
+package hw2.com.demoqa;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
