@@ -30,8 +30,9 @@ public class Junit5ExampleCode {
 
         $("h1").shouldHave(text("selenide / selenide"));
         $("#wiki-tab").click();
-        $(".markdown-body").shouldHave(text("Soft assertions"));
-        $(".markdown-body").$(Selectors.byText("Soft assertions")).click();
+        $("#wiki-pages-box button").scrollTo().click();
+        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
+        $("#wiki-pages-box").$(Selectors.byText("SoftAssertions")).click();
         String junit5Header = "Using JUnit5 extend test class:";
         String exampleJUnit5Code = "@ExtendWith({SoftAssertsExtension.class})\n" +
                 "class Tests {\n" +
@@ -46,6 +47,7 @@ public class Junit5ExampleCode {
                 "}";
         $("#wiki-body")
                 .$("ol[start='3']")
+                .scrollTo()
                 .shouldHave(text(junit5Header))
                 .parent()
                 .$("ol[start='3']~div")
