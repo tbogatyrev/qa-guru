@@ -1,12 +1,10 @@
 package hw3.com.github.selenide;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Configuration.browserSize;
 import static com.codeborne.selenide.Selenide.$;
@@ -34,7 +32,7 @@ public class Junit5ExampleCode {
         $("#wiki-tab").click();
         $(".markdown-body").shouldHave(text("Soft assertions"));
         $(".markdown-body").$(Selectors.byText("Soft assertions")).click();
-        $("#wiki-body").getText();
+        String junit5Header = "Using JUnit5 extend test class:";
         String exampleJUnit5Code = "@ExtendWith({SoftAssertsExtension.class})\n" +
                 "class Tests {\n" +
                 "  @Test\n" +
@@ -46,6 +44,11 @@ public class Junit5ExampleCode {
                 "    $(\"#second\").should(visible).click();\n" +
                 "  }\n" +
                 "}";
-        $("#wiki-body").shouldHave(text(exampleJUnit5Code));
+        $("#wiki-body")
+                .$("ol[start='3']")
+                .shouldHave(text(junit5Header))
+                .parent()
+                .$("ol[start='3']~div")
+                .shouldHave(text(exampleJUnit5Code));
     }
 }
