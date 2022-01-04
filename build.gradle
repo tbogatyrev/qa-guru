@@ -10,7 +10,8 @@ dependencies {
     testImplementation(
             "com.codeborne:selenide:6.1.1",
             "org.junit.jupiter:junit-jupiter-api:5.8.2",
-            "com.codeborne:selenide:6.1.1"
+            "com.github.javafaker:javafaker:1.0.2",
+            "com.fasterxml.jackson.core:jackson-databind:2.13.0"
     )
     testRuntimeOnly(
             "org.junit.jupiter:junit-jupiter-engine:5.8.2",
