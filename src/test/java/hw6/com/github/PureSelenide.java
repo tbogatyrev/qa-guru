@@ -1,5 +1,7 @@
 package hw6.com.github;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -11,10 +13,12 @@ public class PureSelenide extends TestBase {
 
     @Test
     void pureSelenideIssueTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+
         open("/tbogatyrev/qa-guru");
 
         $("h1").shouldHave(text("tbogatyrev / qa-guru"));
         $("#issues-tab").should(visible);
-        $("#issues-tab1").click();
+        $("#issues-tab").click();
     }
 }

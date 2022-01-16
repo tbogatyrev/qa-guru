@@ -4,6 +4,12 @@ plugins {
 
 }
 
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 allure {
     report {
         version.set("2.17.2")

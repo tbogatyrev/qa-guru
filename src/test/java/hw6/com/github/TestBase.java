@@ -13,7 +13,5 @@ public class TestBase {
     static void beforeAll() {
         browserSize = "1920x1080";
         baseUrl = "https://github.com";
-
-        SelenideLogger.addListener("allure", new AllureSelenide());
     }
 }
