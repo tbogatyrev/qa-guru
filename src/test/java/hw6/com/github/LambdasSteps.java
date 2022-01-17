@@ -15,8 +15,9 @@ public class LambdasSteps extends TestBase {
 
     @Test
     public void lambdasStepsTest() {
+        Allure.parameter("Репозиторий", REPOSITORY);
         step("Открываем странице с репозиторием", () -> {
-            open("/tbogatyrev/qa-guru");
+            open(REPOSITORY);
         });
         step("Название репозитория пристутствует", () -> {
             $("h1").shouldHave(text("tbogatyrev / qa-guru"));

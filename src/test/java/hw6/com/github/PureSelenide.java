@@ -15,7 +15,7 @@ public class PureSelenide extends TestBase {
     void pureSelenideIssueTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        open("/tbogatyrev/qa-guru");
+        open(REPOSITORY);
 
         $("h1").shouldHave(text("tbogatyrev / qa-guru"));
         $("#issues-tab").should(visible);
