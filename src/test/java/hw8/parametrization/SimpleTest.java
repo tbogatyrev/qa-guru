@@ -4,12 +4,15 @@ import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
 @DisplayName("Класс с тестами проверяющими 3 и 2")
 public class SimpleTest {
 
     @BeforeAll
     public static void beforeAll() {
+    }
+
+    @AfterAll
+    public static void afterAll() {
     }
 
     @BeforeEach
@@ -30,9 +33,5 @@ public class SimpleTest {
     @DisplayName("Тест проверяет, что 3 > 2")
     void test1() {
         assertTrue(3 > 2);
-    }
-
-    @AfterAll
-    public static void afterAll() {
     }
 }
