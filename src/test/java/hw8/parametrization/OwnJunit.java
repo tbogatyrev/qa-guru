@@ -14,7 +14,7 @@ public class OwnJunit {
 
     public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         globalPrecondition(BeforeAll.class);
-        runTest();
+        runTests();
         globalPrecondition(AfterAll.class);
     }
 
@@ -50,7 +50,7 @@ public class OwnJunit {
                 });
     }
 
-    private static void runTest() throws IllegalAccessException, InstantiationException {
+    private static void runTests() throws IllegalAccessException, InstantiationException {
         for (Method declaredMethod : SimpleTest.class.getDeclaredMethods()) {
             Test test = declaredMethod.getAnnotation(Test.class);
             if (test != null) {
