@@ -60,9 +60,13 @@ public class OwnJunit {
                 } catch (InvocationTargetException | NoSuchMethodException e) {
                     if (e.getCause() instanceof AssertionError) {
                         System.out.println(Test.class.getSimpleName() + " " + declaredMethod.getName() + " failed: " + e.getCause().getMessage());
+                        localPrecondition(AfterEach.class);
+                        simpleTest = null;
                         continue;
                     } else {
                         System.out.println(Test.class.getSimpleName() + " " + declaredMethod.getName() + " broken: " + e.getCause().getMessage());
+                        localPrecondition(AfterEach.class);
+                        simpleTest = null;
                         continue;
                     }
                 }
