@@ -71,9 +71,9 @@ public class PracticeFormTests extends TestBase {
             $("#hobbiesWrapper").$(byText(testData.get("hobbies"))).click();
         });
 
-        step("В поле 'Picture' загружаю файл", () -> {
-            $("#uploadPicture").uploadFromClasspath(testData.get("picture"));
-        });
+//        step("В поле 'Picture' загружаю файл", () -> {
+//            $("#uploadPicture").uploadFromClasspath(testData.get("picture"));
+//        });
 
         step("Заполняем поле 'Current Address'", () -> {
             $("#currentAddress").setValue(testData.get("address"));
@@ -135,9 +135,9 @@ public class PracticeFormTests extends TestBase {
             assertEquals(testData.get("hobbies"), dataToCheck.get("Hobbies"));
         });
 
-        step("Значение в поле 'Picture' соответствует ожидаемому", () -> {
-            assertEquals(testData.get("picture"), dataToCheck.get("Picture"));
-        });
+//        step("Значение в поле 'Picture' соответствует ожидаемому", () -> {
+//            assertEquals(testData.get("picture"), dataToCheck.get("Picture"));
+//        });
 
         step("Значение в поле 'Address' соответствует ожидаемому", () -> {
             assertEquals(testData.get("address"), dataToCheck.get("Address"));
