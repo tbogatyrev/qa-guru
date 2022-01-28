@@ -1,4 +1,4 @@
-package hw6.com.github.steps;
+package hw6.allure.com.github.steps;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Attachment;

@@ -1,4 +1,4 @@
-package hw6.com.github;
+package hw6.allure.com.github;
 
 import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Allure;
@@ -33,6 +33,5 @@ public class LambdasSteps extends TestBase {
     @AfterEach
     public void saveSources() {
         Allure.addAttachment("Page Source", "text/html", WebDriverRunner.source(), "html");
-
     }
 }

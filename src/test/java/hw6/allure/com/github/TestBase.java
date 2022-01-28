@@ -1,4 +1,4 @@
-package hw6.com.github;
+package hw6.allure.com.github;
 
 import org.junit.jupiter.api.BeforeAll;
 

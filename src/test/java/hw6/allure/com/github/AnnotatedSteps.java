@@ -1,6 +1,6 @@
-package hw6.com.github;
+package hw6.allure.com.github;
 
-import hw6.com.github.steps.WebSteps;
+import hw6.allure.com.github.steps.WebSteps;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;

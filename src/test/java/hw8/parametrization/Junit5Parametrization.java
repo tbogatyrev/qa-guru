@@ -1,6 +1,6 @@
 package hw8.parametrization;
 
-import hw6.com.github.TestBase;
+import hw6.allure.com.github.TestBase;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

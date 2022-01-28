@@ -1,4 +1,4 @@
-package hw6.com.github;
+package hw6.allure.com.github;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
