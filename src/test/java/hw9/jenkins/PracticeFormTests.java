@@ -1,5 +1,6 @@
 package hw9.jenkins;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -22,6 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PracticeFormTests extends TestBase {
 
     @Test
+    @Tag("registration")
     void studentRegistrationFormTest() {
         Map<String, String> testData = getDataToFill();
         AtomicReference<LocalDate> birthDateData = new AtomicReference<>();
