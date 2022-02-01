@@ -14,7 +14,13 @@ public class TestBase {
     static void beforeAll() {
         browserSize = System.getProperty("browserSize");
         baseUrl = "https://demoqa.com";
-        remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        remote = String.format(
+                "https://%s:%s@%s", System.getProperty("login"),
+                System.getProperty("password"),
+                System.getProperty("remoteUrl")
+        );
+        browser = System.getProperty("browser");
+        browserVersion = System.getProperty("version");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
