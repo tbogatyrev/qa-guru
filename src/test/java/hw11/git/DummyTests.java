@@ -20,4 +20,9 @@ public class DummyTests {
     public void dummyTest3() {
         assertEquals("30", String.valueOf(Math.max(8, 30)));
     }
+
+    @Test
+    public void dummyTest4() {
+        assertEquals("40", String.valueOf(Math.max(10, 40)));
+    }
 }
