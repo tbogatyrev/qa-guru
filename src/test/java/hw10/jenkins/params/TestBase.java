@@ -7,6 +7,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
+import static hw10.jenkins.params.config.Credentials.credentials;
 
 public class TestBase {
 
@@ -15,8 +16,8 @@ public class TestBase {
         browserSize = System.getProperty("browserSize");
         baseUrl = "https://demoqa.com";
         remote = String.format(
-                "https://%s:%s@%s", System.getProperty("login"),
-                System.getProperty("password"),
+                "https://%s:%s@%s", credentials.login(),
+                credentials.password(),
                 System.getProperty("remoteUrl")
         );
         browser = System.getProperty("browser");
