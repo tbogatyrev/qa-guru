@@ -165,7 +165,7 @@ public class PracticeFormTests extends TestBase {
                 entry("picture", "testFile.jpg"),
                 entry("address", "Test Current Address"),
                 entry("state", "NCR"),
-                entry("city", "Karnal")
+                entry("city", "Delhi")
         );
     }
 
