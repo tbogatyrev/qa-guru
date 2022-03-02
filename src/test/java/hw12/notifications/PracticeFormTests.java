@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PracticeFormTests extends TestBase {
 
     @Test
-    @Tag("registration")
+    @Tag("registration1")
     void studentRegistrationFormTest() {
         Map<String, String> testData = getDataToFill();
         AtomicReference<LocalDate> birthDateData = new AtomicReference<>();
