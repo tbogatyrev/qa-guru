@@ -23,6 +23,10 @@ public class User {
     private String id;
     @JsonProperty("createdAt")
     private String createdAt;
+    @JsonProperty("email")
+    private String email;
+    @JsonProperty("password")
+    private String password;
 
     @JsonProperty("name")
     public String getName() {
@@ -62,5 +66,25 @@ public class User {
     @JsonProperty("createdAt")
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    @JsonProperty("email")
+    public String getEmail() {
+        return email;
+    }
+
+    @JsonProperty("email")
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @JsonProperty("password")
+    public String getPassword() {
+        return password;
+    }
+
+    @JsonProperty("password")
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

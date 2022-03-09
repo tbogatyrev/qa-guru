@@ -37,4 +37,18 @@ public class ReqresTests extends TestBase {
         User createdUser = apiSteps.createUser(testData.getRandomUser());
         apiSteps.deleteUser(createdUser);
     }
+
+    @Test
+    @DisplayName("Регистрация пользователя")
+    public void successfulUserRegistryTest() {
+        String userToken = apiSteps.successfulUserRegistry(testData.getUserForRegistry());
+        assertThat(userToken).isEqualTo("QpwL5tke4Pnpja7X4");
+    }
+
+    @Test
+    @DisplayName("Авторизация пользователя")
+    public void successfulUserLoginTest() {
+        String userToken = apiSteps.successfulUserLogin(testData.getUserForLogin());
+        assertThat(userToken).isEqualTo("QpwL5tke4Pnpja7X4");
+    }
 }

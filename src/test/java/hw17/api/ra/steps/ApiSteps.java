@@ -34,4 +34,24 @@ public class ApiSteps {
                 .then()
                 .statusCode(204);
     }
+
+    public String successfulUserRegistry(User user) {
+        return spec().request("/api/register")
+                .body(user)
+                .post()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("token");
+    }
+
+    public String successfulUserLogin(User user) {
+        return spec().request("/api/register")
+                .body(user)
+                .post()
+                .then()
+                .statusCode(200)
+                .extract()
+                .path("token");
+    }
 }
